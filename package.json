@@ -1,0 +1,38 @@
+{
+    "name": "kc-dabr-wasm",
+    "version": "0.1.0",
+    "description": "A React hook with a WebAssembly-based Konami Code Easter Egg",
+    "author": "doprz",
+    "license": "MIT",
+    "keywords": [
+        "Konami Code",
+        "Easter Egg",
+        "React",
+        "WebAssembly",
+        "wasm"
+    ],
+    "homepage": "https://github.com/doprz/kc-dabr-wasm",
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "copy-wasm": "cp -v src/pkg/kc_dabr_wasm_bg.wasm dist/pkg/",
+        "ci": "npm run build && npm run copy-wasm && npm run format:check && npm run check-exports",
+        "check-types": "tsc --noEmit",
+        "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "@arethetypeswrong/cli": "^0.16.4",
+        "@types/react": "^18.3.11",
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "react": "^18.3.1"
+    }
+}

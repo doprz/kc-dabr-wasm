@@ -1,0 +1,19 @@
+{
+    "name": "kc_dabr_wasm",
+    "type": "module",
+    "collaborators": [
+        "doprz"
+    ],
+    "version": "0.1.0",
+    "license": "MIT or Apache-2.0",
+    "files": [
+        "kc_dabr_wasm_bg.wasm",
+        "kc_dabr_wasm.js",
+        "kc_dabr_wasm.d.ts"
+    ],
+    "main": "kc_dabr_wasm.js",
+    "types": "kc_dabr_wasm.d.ts",
+    "sideEffects": [
+        "./snippets/*"
+    ]
+}
